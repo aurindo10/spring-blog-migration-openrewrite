@@ -15,7 +15,7 @@ import java.io.Serial;
 @MappedSuperclass
 @Data
 @JsonIgnoreProperties(
-		value = { "createdBY", "updatedBy" },
+		value = {"createdBY", "updatedBy"},
 		allowGetters = true
 )
 public abstract class UserDateAudit extends DateAudit {

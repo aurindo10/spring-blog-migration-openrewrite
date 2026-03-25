@@ -3,11 +3,11 @@ package com.sopromadze.blogapi.model.user;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.sopromadze.blogapi.model.Album;
-import com.sopromadze.blogapi.model.audit.DateAudit;
 import com.sopromadze.blogapi.model.Comment;
 import com.sopromadze.blogapi.model.Post;
-import com.sopromadze.blogapi.model.role.Role;
 import com.sopromadze.blogapi.model.Todo;
+import com.sopromadze.blogapi.model.audit.DateAudit;
+import com.sopromadze.blogapi.model.role.Role;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -40,8 +40,8 @@ import java.util.List;
 @Entity
 @Data
 @NoArgsConstructor
-@Table(name = "users", uniqueConstraints = { @UniqueConstraint(columnNames = { "username" }),
-		@UniqueConstraint(columnNames = { "email" }) })
+@Table(name = "users", uniqueConstraints = {@UniqueConstraint(columnNames = {"username"}),
+		@UniqueConstraint(columnNames = {"email"})})
 public class User extends DateAudit {
 	@Serial
 	private static final long serialVersionUID = 1L;
@@ -120,7 +120,6 @@ public class User extends DateAudit {
 		this.email = email;
 		this.password = password;
 	}
-
 
 
 	public List<Todo> getTodos() {

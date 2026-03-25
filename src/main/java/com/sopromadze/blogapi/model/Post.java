@@ -31,7 +31,7 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Data
-@Table(name = "posts", uniqueConstraints = { @UniqueConstraint(columnNames = { "title" }) })
+@Table(name = "posts", uniqueConstraints = {@UniqueConstraint(columnNames = {"title"})})
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Post extends UserDateAudit {
 	@Serial

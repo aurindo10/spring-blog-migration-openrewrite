@@ -23,7 +23,7 @@ import java.io.Serial;
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Data
-@Table(name = "todos", uniqueConstraints = { @UniqueConstraint(columnNames = { "title" }) })
+@Table(name = "todos", uniqueConstraints = {@UniqueConstraint(columnNames = {"title"})})
 public class Todo extends UserDateAudit {
 
 	@Serial

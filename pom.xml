@@ -174,6 +174,12 @@
 					<activeRecipes>
 						<recipe>org.openrewrite.java.migrate.UpgradeToJava17</recipe>
 						<recipe>org.openrewrite.java.spring.boot3.UpgradeSpringBoot_3_0</recipe>
+						<recipe>org.openrewrite.staticanalysis.CommonStaticAnalysis</recipe>
+						<recipe>org.openrewrite.java.OrderImports</recipe>
+						<recipe>org.openrewrite.java.RemoveUnusedImports</recipe>
+						<recipe>org.openrewrite.java.format.AutoFormat</recipe>
+						<recipe>org.openrewrite.java.spring.NoAutowiredOnConstructor</recipe>
+						<recipe>org.openrewrite.java.spring.framework.BeanMethodsNotPublic</recipe>
 					</activeRecipes>
 				</configuration>
 				<dependencies>
@@ -186,6 +192,11 @@
 						<groupId>org.openrewrite.recipe</groupId>
 						<artifactId>rewrite-spring</artifactId>
 						<version>6.17.0</version>
+					</dependency>
+					<dependency>
+						<groupId>org.openrewrite.recipe</groupId>
+						<artifactId>rewrite-static-analysis</artifactId>
+						<version>2.13.0</version>
 					</dependency>
 				</dependencies>
 			</plugin>

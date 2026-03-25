@@ -24,7 +24,7 @@ import java.io.Serial;
 @Entity
 @Data
 @NoArgsConstructor
-@Table(name = "photos", uniqueConstraints = { @UniqueConstraint(columnNames = { "title" }) })
+@Table(name = "photos", uniqueConstraints = {@UniqueConstraint(columnNames = {"title"})})
 public class Photo extends UserDateAudit {
 	@Serial
 	private static final long serialVersionUID = 1L;

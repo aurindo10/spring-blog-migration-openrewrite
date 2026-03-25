@@ -28,7 +28,7 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Data
-@Table(name = "albums", uniqueConstraints = { @UniqueConstraint(columnNames = { "title" }) })
+@Table(name = "albums", uniqueConstraints = {@UniqueConstraint(columnNames = {"title"})})
 public class Album extends UserDateAudit {
 	@Serial
 	private static final long serialVersionUID = 1L;

@@ -41,7 +41,6 @@ public class PagedResponse<T> {
 	}
 
 
-
 	public boolean isLast() {
 		return last;
 	}

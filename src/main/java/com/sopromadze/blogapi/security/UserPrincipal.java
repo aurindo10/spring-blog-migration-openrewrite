@@ -17,13 +17,13 @@ public class UserPrincipal implements UserDetails {
 	@Serial
 	private static final long serialVersionUID = 1L;
 
-	private Long id;
+	private final Long id;
 
-	private String firstName;
+	private final String firstName;
 
-	private String lastName;
+	private final String lastName;
 
-	private String username;
+	private final String username;
 
 	@JsonIgnore
 	private String email;
@@ -101,10 +101,12 @@ public class UserPrincipal implements UserDetails {
 	}
 
 	public boolean equals(Object object) {
-		if (this == object)
+		if (this == object) {
 			return true;
-		if (object == null || getClass() != object.getClass())
+		}
+		if (object == null || getClass() != object.getClass()) {
 			return false;
+		}
 		UserPrincipal that = (UserPrincipal) object;
 		return Objects.equals(id, that.id);
 	}
