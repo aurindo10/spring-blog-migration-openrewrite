@@ -67,7 +67,7 @@ public class RestControllerExceptionHandler {
 		return new ResponseEntity< >(apiResponse, HttpStatus.FORBIDDEN);
 	}
 
-	@ExceptionHandler({ MethodArgumentNotValidException.class })
+	@ExceptionHandler({MethodArgumentNotValidException.class})
 	@ResponseBody
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
 	public ResponseEntity<ExceptionResponse> resolveException(MethodArgumentNotValidException ex) {
@@ -80,7 +80,7 @@ public class RestControllerExceptionHandler {
 				HttpStatus.BAD_REQUEST.value()), HttpStatus.BAD_REQUEST);
 	}
 
-	@ExceptionHandler({ MethodArgumentTypeMismatchException.class })
+	@ExceptionHandler({MethodArgumentTypeMismatchException.class})
 	@ResponseBody
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
 	public ResponseEntity<ExceptionResponse> resolveException(MethodArgumentTypeMismatchException ex) {
@@ -92,7 +92,7 @@ public class RestControllerExceptionHandler {
 				HttpStatus.BAD_REQUEST.value()), HttpStatus.BAD_REQUEST);
 	}
 
-	@ExceptionHandler({ HttpRequestMethodNotSupportedException.class })
+	@ExceptionHandler({HttpRequestMethodNotSupportedException.class})
 	@ResponseStatus(HttpStatus.METHOD_NOT_ALLOWED)
 	@ResponseBody
 	public ResponseEntity<ExceptionResponse> resolveException(HttpRequestMethodNotSupportedException ex) {
@@ -105,7 +105,7 @@ public class RestControllerExceptionHandler {
 				HttpStatus.METHOD_NOT_ALLOWED.value()), HttpStatus.METHOD_NOT_ALLOWED);
 	}
 
-	@ExceptionHandler({ HttpMessageNotReadableException.class })
+	@ExceptionHandler({HttpMessageNotReadableException.class})
 	@ResponseBody
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
 	public ResponseEntity<ExceptionResponse> resolveException(HttpMessageNotReadableException ex) {

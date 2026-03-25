@@ -3,10 +3,13 @@ package com.sopromadze.blogapi.exception;
 import com.sopromadze.blogapi.payload.ApiResponse;
 import org.springframework.http.ResponseEntity;
 
+import java.io.Serial;
+
 public class ResponseEntityErrorException extends RuntimeException {
+	@Serial
 	private static final long serialVersionUID = -3156815846745801694L;
 
-	private transient ResponseEntity<ApiResponse> apiResponse;
+	private final transient ResponseEntity<ApiResponse> apiResponse;
 
 	public ResponseEntityErrorException(ResponseEntity<ApiResponse> apiResponse) {
 		this.apiResponse = apiResponse;

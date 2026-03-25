@@ -14,7 +14,6 @@ public class PostResponse {
 	private List<String> tags;
 
 
-
 	public List<String> getTags() {
 
 		return tags == null ? null : new ArrayList<>(tags);
